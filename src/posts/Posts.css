@@ -1,0 +1,178 @@
+.posts{
+    width: 800px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    column-gap: 10px;
+    padding: 10px;
+    margin-left: 15%;
+}
+.posts .post{
+    width: 350px;
+    height: 300px;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+.posts .post:hover{
+    opacity: 0.8;
+}
+.posts .post img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.posts .post .post-info{
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    color: white;
+} 
+.posts .post:hover .post-info{
+    display: block;
+}
+b{
+    padding: 0 10px;
+}
+
+/*---Post View-----*/
+
+.post-view{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(142, 144, 144, 0.603);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.post-view .p-v-c{
+    width: 880px;
+    height: 550px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: aliceblue;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+.close{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    top: 3rem;right: 18rem;
+}
+.post-view .p-v-c .post-v-l{
+    width: 50%;
+    height: 100%;
+}
+.post-view .p-v-c .post-v-l img{
+    width: 100%;
+    height: 100%;
+}
+.post-view .p-v-c .post-v-r{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+.post-view .p-v-c .post-v-r .info{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 25%;
+}
+.post-view .p-v-c .post-v-r .info img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.post-view .p-v-c .post-v-r .coment-box{
+    height: 59%;
+    padding-top: 10px;
+}
+.post-view .p-v-c .post-v-r p{
+    height: 10%;
+}
+
+/* ===Mobile===*/
+@media (max-width:600px) {
+    .posts{
+        margin-left: 0px;
+        display: block;
+    }
+    .posts .post{
+        width: 95%;
+        height: 500px;
+    }
+    .post-view{
+        width: 185vw;
+        height: 185vh;
+        position: fixed;
+    }
+    .post-view .p-v-c{
+        width: 680px;
+        height: 590px;
+        display: block;
+        top: 20px;
+        left: 40px;
+    }
+    .close{
+        top: 1rem;left: 45rem;
+        font-weight: 100px;
+    }
+    .post-view .p-v-c .post-v-l{
+        width: 100%;
+    }
+    .post-view .p-v-c .post-v-r{
+        width: 100%;
+        background-color: white;
+    }
+}
+
+/*===Lap===*/
+@media (max-width:1300px) {
+    .posts{
+        margin-left: 0px;
+    }
+}
+
+/* ===Tablet===*/
+@media (max-width:900px) {
+    .posts{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .posts .post{
+        width: 95%;
+        height: 500px;
+    }
+    .post-view{
+        width: 200vw;
+        height: 200vh;
+        position: fixed;
+    }
+    .post-view .p-v-c{
+        width: 600px;
+        height: 750px;
+        display: block;
+        top: 20px;
+        left: 100px;
+    }
+    .close{
+        position: absolute;
+        top: 5px;
+        left: 45rem;
+        z-index: 10;
+        font-size: 50px;
+    }
+    .post-view .p-v-c .post-v-l{
+        width: 100%;
+    }
+    .post-view .p-v-c .post-v-r{
+        width: 100%;
+        background-color: white;
+    }
+}
